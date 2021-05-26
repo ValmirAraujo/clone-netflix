@@ -1,0 +1,114 @@
+/* Usar variaveis para cores padrões do projeto, pois se precisar trocar, trocar só em um
+   lugar. pode usar outros elementos como variaveis tbm. */
+:root{
+    --vermelho: #E50914;
+    --preta: #141414;
+}
+
+/* reseta o css padrão dos navegadores */
+*{
+    margin: 0;
+    padding: 0;
+    /* serve para deixar o conteudo interior da caixa contido dentro dela
+       e não exceder o tamanho definido para determinado elemento. Ex.: uma caixa de 
+       largura de 400px e tem um conteúdo interno maior que 400px, sem o border-box
+       a caixa iria ficar mais larga para caber esse conteúdo, já com o border-box
+       o conteúdo vai ficar contido dentro dela.  */
+    box-sizing: border-box; 
+}
+
+/* ELEMENTOS BASE */
+
+body{
+   background: var(--preta);
+   font-family: 'Arial', Times, serif;
+   color: white;
+}
+
+header .container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo{
+    margin-left: 5px;
+    color: var(--vermelho);
+    font-family: 'Arial Black', times;
+    font-size: 40px;
+}
+
+header nav a{
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 10px;
+}
+
+header nav a:hover{
+    color: #fff;
+}
+
+/* FILME PRINCIPAL */
+
+.filme-principal{
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url('../img/capa-skam.jpg');
+    height: 400px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.filme-principal .descricao {
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.filme-principal .titulo{
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+.botao{
+    background-color: rgba(0,0,0,.50);
+    border: none;
+    color: white;
+
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 12px;
+
+    cursor: pointer;
+    transition: .3s ease all;
+}
+
+.botao:hover{
+    background-color: white;
+    color: black;
+}
+
+.botao i{
+    margin-right: 8px;
+}
+
+.container{
+    margin-left: 30px;
+}
+
+.filme-principal .container{
+    width: 70%;
+}
+
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.carrosel-filmes{
+    margin-top: 10px;
+}
